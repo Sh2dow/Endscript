@@ -186,7 +186,8 @@ namespace Endscript.Profiles
 				GameINT.Prostreet => new ProstreetProfile(directory),
 				GameINT.Undercover => new UndercoverProfile(directory),
 				GameINT.Underground1 => new Underground1Profile(directory),
-				GameINT.Underground2 => new Underground2Profile(directory),
+                GameINT.Underground2 => new Underground2Profile(directory),
+                GameINT.World => new WorldProfile(directory),
 				_ => throw new InvalidGameException(game)
 			};
 		}
