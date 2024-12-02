@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Description>Library for managing, parsing, and generating End commands based on Nikki class library.</Description>
     <Company />
     <Authors>MaxHwoy</Authors>
