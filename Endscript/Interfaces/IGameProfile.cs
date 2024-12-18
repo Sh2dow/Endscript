@@ -13,7 +13,7 @@ namespace Endscript.Interfaces
 		public string Directory { get; }
 
 		public string[] Load(Launch launch);
-		public string[] Save();
+		public string[] Save(GameINT? gameInt);
 		public void Serialize(string directory);
 		public void Deserialize(string directory);
 	}

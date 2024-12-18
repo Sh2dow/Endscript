@@ -667,16 +667,19 @@ namespace Endscript.Profiles
 			return tasks.Select(_ => _.Result).Where(_ => !(_ is null)).ToArray();
 		}
 
-		public string[] Save()
+		public string[] Save(GameINT? gameInt = null)
 		{
 			var tasks = new Task<string>[this._size];
 
 			for (int i = 0; i < this._size; ++i)
 			{
-
 				var sdb = this._sdb[i];
+                
+                if (gameInt != null)
+                {
+                    sdb.Database.GameINT = gameInt.Value;
+                }
 				tasks[i] = Task.Run(() => this.SaveOneSDB(sdb));
-
 			}
 
 			Task.WaitAll(tasks);
