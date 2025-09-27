@@ -37,6 +37,7 @@
 		erase_file,
 		erase_folder,
 		move_file,
+		move_folder,
 		generate,
 		directory,
 		filecount,

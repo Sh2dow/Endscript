@@ -214,6 +214,7 @@ namespace Endscript.Core
 				eCommandType.import_all => new ImportAllCommand(),
 				eCommandType.infobox => new InfoboxCommand(),
 				eCommandType.move_file => new MoveFileCommand(),
+				eCommandType.move_folder => new MoveFolderCommand(),
 				eCommandType.@new => new NewCommand(),
 				eCommandType.pack_stream => new PackStreamCommand(),
 				eCommandType.remove_collection => new RemoveCollectionCommand(),
