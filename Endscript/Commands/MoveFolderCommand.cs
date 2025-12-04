@@ -4,6 +4,7 @@ using Endscript.Core;
 using Endscript.Enums;
 using Endscript.Helpers;
 using Endscript.Exceptions;
+using Endscript.Commands.Logical;
 
 
 
@@ -84,7 +85,17 @@ namespace Endscript.Commands
 
 				if (this._import == eImportType.negate && File.Exists(targetFilePath)) continue; // Skip existing files if negate
 
-                file.CopyTo(targetFilePath);
+                // Override if the file exists in the destination
+				if (!File.Exists(targetFilePath))
+				{
+					file.CopyTo(targetFilePath, true);
+                }
+				else
+				{
+					var info = new FileInfo(targetFilePath);
+					info.IsReadOnly = false;
+					file.CopyTo(targetFilePath, true);
+                }
             }
 
             // If recursive and copying subdirectories, recursively call this method

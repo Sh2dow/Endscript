@@ -51,6 +51,10 @@
 		unpack_stream,
 		pack_stream,
 		end,
-        infobox
-	}
+        infobox,
+        move_collection_up,
+        move_collection_down,
+		move_collection_first,
+        move_collection_last
+    }
 }
